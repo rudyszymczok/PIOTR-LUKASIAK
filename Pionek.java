@@ -29,7 +29,7 @@ public class Pionek extends StackPane {
         tlo.setTranslateY((Plansza.wielkosc_pola - Plansza.wielkosc_pola*0.26*2)/2 + Plansza.wielkosc_pola * 0.07);
 
         Ellipse pion= new Ellipse(Plansza.wielkosc_pola * 0.3125, Plansza.wielkosc_pola * 0.26);
-        pion.setFill(Color.valueOf(#####)); // TUTAJ USTAWIAM KOLOR
+        pion.setFill(Color.valueOf(Setup.setup.kolor)); // TUTAJ USTAWIAM KOLOR
         pion.setStroke(Color.BLACK);
         pion.setStrokeWidth(Plansza.wielkosc_pola*0.03);
 
