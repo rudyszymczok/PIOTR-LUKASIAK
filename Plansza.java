@@ -13,7 +13,7 @@ public class Plansza {
 
 
 
-    public static int rozmiar = 7;
+    public static int rozmiar = Setup.setup.rozmiar;
 
     public static int wielkosc_pola=400/rozmiar;
 
