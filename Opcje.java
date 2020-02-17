@@ -23,7 +23,7 @@ public class Opcje implements Initializable {
     @FXML private CheckBox czerwonyCheckbox;
     @FXML private ChoiceBox trybGry;
 
-    public Setup setup = new Setup("#000035",7);
+    public Setup setup = Setup.getInstance();
 
     @FXML
     private void bialyCheckboxChecked(ActionEvent actionEvent) throws IOException{
@@ -79,14 +79,15 @@ public class Opcje implements Initializable {
     }
 
 }
-class Setup{
+class Setup {
+    public static final Setup setup = new Setup("#000035",7);
     String kolor;
     int rozmiar;
-
-    public Setup(String kolor,int rozmiar){
+    private Setup(String kolor,int rozmiar) {
         this.kolor=kolor;
         this.rozmiar=rozmiar;
     }
+    public static final Setup getInstance() {return setup;}
 
     public void setKolory(String kolor) { this.kolor = kolor; }
 
